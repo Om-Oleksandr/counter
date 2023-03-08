@@ -1,0 +1,10 @@
+.container {
+    width: 100%;
+    max-width: 340px;
+    margin: auto;
+    display: grid;
+    row-gap: 20px;
+    background-color: darkslateblue;
+    padding: 1.5rem;
+    border-radius: 15px 15px 0 0;
+}
