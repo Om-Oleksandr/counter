@@ -13,7 +13,7 @@ CounterControl.propTypes = {
   clickFunc: PropTypes.func.isRequired,
   name: PropTypes.string,
   classes: PropTypes.string,
-  isDisabled: PropTypes.func,
+  isDisabled: PropTypes.bool,
 };
 
 export default CounterControl;

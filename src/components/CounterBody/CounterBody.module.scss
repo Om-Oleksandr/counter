@@ -1,0 +1,18 @@
+@use "/src/common/styles/templates" as *;
+@use "/src/common/styles/mixins" as mixin;
+.container {
+  @extend %text;
+  @include mixin.flex-block(unset, unset, column);
+  row-gap: 10px;
+  font-family: sans-serif;
+  font-weight: 600;
+  & div button {
+    min-width: 50px;
+    padding: 0.3rem 1rem;
+  }
+  & div button:last-child {
+    margin-left: 0.85rem;
+  }
+}
+
+

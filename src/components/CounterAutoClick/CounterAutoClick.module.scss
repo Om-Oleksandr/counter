@@ -1,0 +1,92 @@
+@use "/src/common/styles/templates" as *;
+@use "/src/common/styles/mixins" as mixin;
+
+.container {
+  @extend %text;
+  @include mixin.flex-block(center, space-between, unset);
+  margin-top: 30px;
+  & span {
+    display: flex;
+  }
+
+  & span:first-child {
+    column-gap: 15px;
+  }
+
+  & span:last-child {
+    @include mixin.flex-block(flex-end, unset, unset);
+  }
+
+  & span:last-child input {
+    margin: 0 10px 0 0;
+  }
+}
+
+.autoclick__switch {
+  padding: 0.2rem;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 1px 0 3px currentColor, -1px 0 3px currentColor,
+    0 1px 10px rgba(0, 0, 0, 0.3), 0 -1px 10px rgba(0, 0, 0, 0.3),
+    inset 0 0 1px currentColor;
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 40px;
+  transition: all 0.6s ease-in-out 0s;
+  &:before {
+    content: "";
+    position: absolute;
+    border: {
+      width: 2px;
+      style: solid;
+      color: lightgoldenrodyellow;
+      radius: 50%;
+    }
+    height: 10px;
+    width: 10px;
+    transform: translateY(-50%);
+    top: 50%;
+    background-color: transparent;
+    left: 7%;
+    transition: all 0.6s ease-in-out 0s;
+  }
+  &.disabled:before {
+    left: 93%;
+    transform: translate(-100%, -50%);
+  }
+}
+
+.enabled {
+  background-color: darkgreen;
+  color: darkgreen;
+}
+
+.disabled {
+  background-color: brown;
+  color: brown;
+  justify-content: flex-end;
+}
+
+.autoclick__frequency {
+  width: 70px;
+  max-width: 150px;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  padding: 0;
+  font: {
+    weight: 600;
+    family: sans-serif;
+  }
+  outline: none;
+  transition: all 0.6s linear 0s;
+  &:focus {
+    border-color: darkgreen;
+  }
+  &::-webkit-inner-spin-button {
+    display: none;
+  }
+}

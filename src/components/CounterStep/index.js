@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import cx from "classnames";
 import PropTypes from "prop-types";
-import styles from "./CounterStep.module.css";
+import styles from "./CounterStep.module.scss";
 
 class CounterStep extends Component {
   constructor(props) {
@@ -46,7 +46,7 @@ class CounterStep extends Component {
 
 CounterStep.propTypes = {
   step: PropTypes.number.isRequired,
-  isAutoClickEnabled: PropTypes.func.isRequired,
+  isAutoClickEnabled: PropTypes.bool.isRequired,
   setNewStep: PropTypes.func.isRequired,
 };
 

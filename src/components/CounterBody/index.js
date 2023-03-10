@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import CounterControls from "./../CounterControls";
-import styles from "./CounterBody.module.css";
+import styles from "./CounterBody.module.scss";
 
 const CounterBody = (props) => {
   const { counter, setNewCounter, step, add, setNewMode, isAutoClickEnabled } =

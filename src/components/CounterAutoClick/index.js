@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import CounterControl from "./../CounterControl/index";
-import styles from "./CounterAutoClick.module.css";
+import styles from "./CounterAutoClick.module.scss";
 
 class CounterAutoClick extends Component {
   constructor(props) {

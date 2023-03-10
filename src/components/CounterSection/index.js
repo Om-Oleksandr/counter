@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import CounterBody from "./../CounterBody";
 import CounterStep from "./../CounterStep";
-import styles from "./CounterSection.module.css";
+import styles from "./CounterSection.module.scss";
 import CounterAutoClick from "./../CounterAutoClick";
 class CounterSection extends Component {
   constructor(props) {

@@ -1,0 +1,7 @@
+@mixin flex-block($align-items, $justify-content, $dir) {
+    display: flex;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    flex-direction: $dir;
+  }
+  
